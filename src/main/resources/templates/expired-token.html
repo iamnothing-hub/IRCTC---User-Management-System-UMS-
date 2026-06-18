@@ -1,0 +1,197 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Link Expired</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI',sans-serif;
+        }
+
+        body{
+
+            min-height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            background:linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #1e293b);
+
+        }
+
+        .card{
+
+            width:500px;
+
+            background:white;
+
+            padding:50px;
+
+            border-radius:25px;
+
+            text-align:center;
+
+            box-shadow:
+                    0 10px 30px rgba(
+                            0,
+                            0,
+                            0,
+                            .4);
+
+        }
+
+        .icon{
+
+            font-size:90px;
+
+            margin-bottom:20px;
+
+            animation:blink 1.5s infinite;
+
+        }
+
+        @keyframes blink{
+
+            0%{
+                opacity:1;
+            }
+
+            50%{
+                opacity:.5;
+            }
+
+            100%{
+                opacity:1;
+            }
+
+        }
+
+        h1{
+
+            color:#f59e0b;
+
+            margin-bottom:20px;
+
+        }
+
+        p{
+
+            color:#64748b;
+
+            line-height:28px;
+
+            margin-bottom:35px;
+
+            font-size:16px;
+
+        }
+
+        .btn{
+
+            display:inline-block;
+
+            text-decoration:none;
+
+            background:#2563eb;
+
+            color:white;
+
+            padding:15px 30px;
+
+            border-radius:12px;
+
+            transition:.3s;
+
+            font-size:16px;
+
+            font-weight:bold;
+
+        }
+
+        .btn:hover{
+
+            background:#1d4ed8;
+
+            transform:translateY(-2px);
+
+        }
+
+        .footer{
+
+            margin-top:30px;
+
+            color:#94a3b8;
+
+            font-size:14px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="icon">
+
+        ⏳
+
+    </div>
+
+    <h1>
+
+        Password Reset Link Expired
+
+    </h1>
+
+    <p>
+
+        Your password setup link has expired.
+
+        <br><br>
+
+        For security reasons, password reset links are valid for only 24 hours.
+
+        <br><br>
+
+        Please request a new password reset link.
+
+    </p>
+
+    <a
+            href="/auth/resend-link"
+            class="btn">
+
+        Resend Password Link
+
+    </a>
+
+    <div class="footer">
+
+        IRCTC User Management System
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
+```

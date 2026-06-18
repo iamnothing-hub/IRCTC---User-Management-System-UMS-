@@ -1,0 +1,75 @@
+
+                                                    Admin
+                                                     ↓
+                                                    Create User
+                                                     ↓
+                                                    Generate Username
+                                                     ↓
+                                                    Save User (Inactive)
+                                                     ↓
+                                                    Generate Reset Token
+                                                     ↓
+                                                    Save Token
+                                                     ↓
+                                                    Send Email
+                                                     ↓
+                                                    User Clicks Link
+                                                     ↓
+                                                    Set Password
+                                                     ↓
+                                                    Hash Password using Argon2
+                                                     ↓
+                                                    Activate Account
+                                                     ↓
+                                                    Login
+                                                     ↓
+                                                    Access Token + Refresh Token
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    Controller
+                                                        ↓
+                                                    UserService
+                                                        ↓
+                                                    ----------------------------------
+                                                    UserRepository
+                                                    RoleRepository
+                                                    UsernameGeneratorService
+                                                    PasswordEncoder
+                                                    PasswordResetTokenService
+                                                    EmailService
+                                                    ----------------------------------
+
+
+
+
+                                                    Thymeleaf Password Setup Page
+                                                    ↓
+                                                    Resend Password Link
+                                                    ↓
+                                                    Token Cleanup Scheduler
+                                                    ↓
+                                                    Spring Security
+                                                    ↓
+                                                    CustomUserDetailsService
+                                                    ↓
+                                                    JWT Access Token
+                                                    ↓
+                                                    Refresh Token
+                                                    ↓
+                                                    RBAC
+                                                    ↓
+                                                    Method-Level Security
+
+

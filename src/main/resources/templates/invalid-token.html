@@ -1,0 +1,254 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Invalid Password Reset Link
+
+    </title>
+
+    <style>
+
+        *{
+
+            margin:0;
+
+            padding:0;
+
+            box-sizing:border-box;
+
+            font-family:'Segoe UI',sans-serif;
+
+        }
+
+        body{
+
+            min-height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            background:
+                    linear-gradient(
+                            135deg,
+                            #0f172a,
+                            #1e293b);
+
+        }
+
+        .card{
+
+            width:500px;
+
+            background:white;
+
+            padding:50px;
+
+            border-radius:25px;
+
+            text-align:center;
+
+            box-shadow:
+                    0 10px 35px
+                    rgba(
+                            0,
+                            0,
+                            0,
+                            .4);
+
+        }
+
+        .icon{
+
+            font-size:90px;
+
+            color:#ef4444;
+
+            margin-bottom:20px;
+
+            animation:pulse 1.5s infinite;
+
+        }
+
+        @keyframes pulse{
+
+            0%{
+
+                transform:scale(1);
+
+            }
+
+            50%{
+
+                transform:scale(1.1);
+
+            }
+
+            100%{
+
+                transform:scale(1);
+
+            }
+
+        }
+
+        h1{
+
+            color:#ef4444;
+
+            margin-bottom:20px;
+
+        }
+
+        p{
+
+            color:#64748b;
+
+            line-height:28px;
+
+            margin-bottom:35px;
+
+            font-size:16px;
+
+        }
+
+        .button-container{
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:20px;
+
+        }
+
+        .btn{
+
+            text-decoration:none;
+
+            padding:15px 25px;
+
+            border-radius:12px;
+
+            color:white;
+
+            font-weight:bold;
+
+            transition:.3s;
+
+        }
+
+        .login-btn{
+
+            background:#2563eb;
+
+        }
+
+        .login-btn:hover{
+
+            background:#1d4ed8;
+
+            transform:translateY(-2px);
+
+        }
+
+        .forgot-btn{
+
+            background:#ef4444;
+
+        }
+
+        .forgot-btn:hover{
+
+            background:#dc2626;
+
+            transform:translateY(-2px);
+
+        }
+
+        .footer{
+
+            margin-top:35px;
+
+            color:#94a3b8;
+
+            font-size:14px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="icon">
+
+        ✖
+
+    </div>
+
+    <h1>
+
+        Invalid Password Reset Link
+
+    </h1>
+
+    <p>
+
+        The password reset link you are trying to access
+        is invalid or no longer available.
+
+        <br><br>
+
+        Please request a new password reset link or
+        return to the login page.
+
+    </p>
+
+    <div class="button-container">
+
+        <a
+                href="/login"
+                class="btn login-btn">
+
+            Back To Login
+
+        </a>
+
+        <a
+                href="/auth/forgot-password"
+                class="btn forgot-btn">
+
+            Request New Link
+
+        </a>
+
+    </div>
+
+    <div class="footer">
+
+        IRCTC User Management System
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
+```
