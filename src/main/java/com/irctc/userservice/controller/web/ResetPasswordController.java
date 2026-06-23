@@ -1,7 +1,7 @@
-package com.irctc.userservice.controller;
+package com.irctc.userservice.controller.web;
 
 import com.irctc.userservice.dto.request.ResetPasswordRequest;
-import com.irctc.userservice.exception.ResourceNotFoundException;
+//import com.irctc.userservice.exception.ResourceNotFoundException;
 import com.irctc.userservice.service.PasswordResetTokenService;
 import com.irctc.userservice.service.UserService;
 import jakarta.validation.Valid;

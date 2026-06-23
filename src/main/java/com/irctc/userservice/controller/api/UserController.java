@@ -1,4 +1,4 @@
-package com.irctc.userservice.controller;
+package com.irctc.userservice.controller.api;
 
 import com.irctc.userservice.dto.request.CreateUserRequest;
 import com.irctc.userservice.dto.request.ResetPasswordRequest;
