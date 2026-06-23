@@ -2,8 +2,9 @@ package com.irctc.userservice.service.impl;
 
 import com.irctc.userservice.entity.PasswordResetToken;
 import com.irctc.userservice.entity.User;
-import com.irctc.userservice.exception.BadRequestException;
+import com.irctc.userservice.exception.InvalidTokenException;
 import com.irctc.userservice.exception.ResourceNotFoundException;
+import com.irctc.userservice.exception.TokenExpiredException;
 import com.irctc.userservice.repository.PasswordResetTokenRepository;
 import com.irctc.userservice.repository.UserRepository;
 import com.irctc.userservice.service.PasswordResetTokenService;
@@ -42,11 +43,11 @@ public class PasswordResetTokenServiceImpl implements PasswordResetTokenService 
         PasswordResetToken passwordResetToken = passwordResetTokenRepository.findByToken(token).orElseThrow(() -> new ResourceNotFoundException("Invalid Token."));
 
         if(passwordResetToken.getUsed()){
-            throw new BadRequestException("Token is already used");
+            throw new InvalidTokenException("Token is already used");
         }
 
         if(passwordResetToken.getExpiryDate().isBefore(Instant.now())){
-            throw new BadRequestException("Token is expired.");
+            throw new TokenExpiredException("Token is expired.");
         }
 
         return passwordResetToken;

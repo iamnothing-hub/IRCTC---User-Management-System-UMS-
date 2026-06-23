@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.time.LocalDateTime;
 
-@RestControllerAdvice
+@RestControllerAdvice(basePackages = "com.irctc.userservice.controller.api")
 @RequiredArgsConstructor
 public class GlobalExceptionHandler {
 
