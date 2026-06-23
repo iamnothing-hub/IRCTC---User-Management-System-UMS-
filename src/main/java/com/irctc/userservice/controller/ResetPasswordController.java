@@ -26,24 +26,18 @@ public class ResetPasswordController {
             @RequestParam String token,
             Model model) {
 
-        try {
+        passwordResetTokenService.validateToken(token);
 
-            passwordResetTokenService.validateToken(token);
+        ResetPasswordRequest request =
+                new ResetPasswordRequest();
 
-            model.addAttribute("resetPasswordRequest",
-                    new ResetPasswordRequest());
+        request.setToken(token);
 
-//            model.addAttribute("token", token);
+        model.addAttribute(
+                "resetPasswordRequest",
+                request);
 
-            return "reset-password";
-
-        }
-        catch (ResourceNotFoundException ex) {
-
-            return "invalid-token";
-
-        }
-
+        return "reset-password";
     }
 
     @PostMapping("/reset-password")
